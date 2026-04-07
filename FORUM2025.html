@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+<!-- Left-aligned -->
+<div class="media">
+  <div class="media-left media-top"">
+    <img src="logo MDC FORUM_engagement_mini.png" class="media-object">
+  </div>
+  <div class="media-body">
+    <h1 class="media-heading"><br><br><strong>FORUM DE L'ENGAGEMENT 2025-2026</strong></h1>
+  </div>
+</div>
+
+</h1>
+
+  <h2>TON PARCOURS :</h2>
+  <p><i>Tape ton nom pour retrouver ton programme personnalisé</i></p>  
+  <input class="form-control" id="myInput" type="text" placeholder="Rechercher..">
+  <br>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>NOM</th>
+        <th>Classe</th>
+        <th>Groupe</th>
+		<th>Rotation1</th>
+        <th>Rotation2</th>
+		<th>Rotation3</th>
+        <th>Rotation4</th>
+		<th>Rotation5</th>
+        <th>Rotation6</th>
+      </tr>
+    </thead>
+    <tbody id="myTable">
+       <tr>
+            <td style="height:14.4pt;width:211pt;" height="19" width="282">
+                ACHARI Sofiane
+            </td>
+            <td style="width:48pt;" width="64">
+                1A
+            </td>
+            <td style="width:110pt;" width="146">
+                Groupe 01
+            </td>
+            <td class="xl65" style="width:176pt;" width="235">
+                Eco-délégués<br>
+                <span style="color:#84000d;">Salle B2</span>
+            </td>
+            <td class="xl65" style="width:176pt;" width="235">
+                CIDFF<br>
+                <span style="color:#84000d;">Salle Polyvalente</span>
+            </td>
+            <td class="xl65" style="width:233pt;" width="311">
+                CIR gendarmerie
+            </td>
+            <td class="xl65" style="width:200pt;" width="266">
+                Jeunes arbitres UNSS
+            </td>
+            <td class="xl66" style="width:233pt;" width="311">
+                Réserve civique - DSDEN
+            </td>
+            <td class="xl66" style="border-left-style:none;width:176pt;" width="235">
+                Préparation militaire marine Amiral
+            </td>
+        </tr>
+        <tr>
+            <td style="height:14.4pt;" height="19">
+                ACHOIFFE LAKHDAR Abderahman
+            </td>
+            <td>
+                1C
+            </td>
+            <td>
+                Groupe 05
+            </td>
+            <td class="xl65">
+                Jeunes arbitres UNSS
+            </td>
+            <td class="xl65">
+                MRAP
+            </td>
+            <td class="xl65">
+                Eco-délégués
+            </td>
+            <td class="xl65">
+                Réserve de la gendarmerie
+            </td>
+            <td class="xl67" style="border-top-style:none;">
+                CIDFF
+            </td>
+            <td class="xl67" style="border-left-style:none;border-top-style:none;">
+                Monalisa Aube
+            </td>
+        </tr>
+        <tr>
+            <td style="height:14.4pt;" height="19">
+                ACHOUR Sifeddine
+            </td>
+            <td>
+                1E
+            </td>
+            <td>
+                Groupe 14
+            </td>
+            <td class="xl65">
+                Artisans du monde pour un commerce équitable
+            </td>
+            <td class="xl65">
+                La cravate solidaire
+            </td>
+            <td class="xl65">
+                Arbres Remarquables de l'Aube
+            </td>
+            <td class="xl65">
+                Eco-délégués
+            </td>
+            <td class="xl67" style="border-top-style:none;">
+                Atelier "les gestes qui sauvent"
+            </td>
+            <td class="xl67" style="border-left-style:none;border-top-style:none;">
+                Protection civile
+            </td>
+        </tr>
+        <tr>
+            <td style="height:14.4pt;" height="19">
+                ADINANI Anaïs
+            </td>
+            <td>
+                1D
+            </td>
+            <td>
+                Groupe 10
+            </td>
+            <td class="xl65">
+                e-graine grand est
+            </td>
+            <td class="xl65">
+                0 déchets Troyes
+            </td>
+            <td class="xl65">
+                Jeunes arbitres UNSS
+            </td>
+            <td class="xl65">
+                Chemins de l'égalité
+            </td>
+            <td class="xl67" style="border-top-style:none;">
+                Réserve de la gendarmerie
+            </td>
+            <td class="xl67" style="border-left-style:none;border-top-style:none;">
+                CIDFF
+            </td>
+        </tr>
+    </tbody>
+  </table>
+  
+  <p></p>
+</div>
+
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
+</body>
+</html>
